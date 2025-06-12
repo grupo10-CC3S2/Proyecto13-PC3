@@ -4,5 +4,9 @@ variable "name" {
 }
 
 variable "network_name" {
-  type        = string
+  type = string
+}
+
+variable "instance_count" {
+  type = number
 }
