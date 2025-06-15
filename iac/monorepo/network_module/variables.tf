@@ -1,6 +1,6 @@
 variable "name" {
   type    = string
-  default = "network-us-east-1"
+  default = "network-1-us-east"
 }
 
 variable "port" {
