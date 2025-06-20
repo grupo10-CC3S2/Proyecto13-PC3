@@ -1,0 +1,18 @@
+#!/bin/sh
+
+echo "Validando estados Terraform"
+
+cd src
+
+# Ejecutar validación
+python verificar_estado.py
+
+# Verificar resultado
+if [ $? -ne 0 ]; then
+    echo "Validación falló - Push bloqueado"
+    echo "Usa 'git push --no-verify' para omitir"
+    exit 1
+fi
+
+echo "Validación completada - Procediendo con push"
+exit 0
